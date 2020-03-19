@@ -11,6 +11,7 @@ image:
   - Ubuntu
 install:
   - ps: Install-Module Pester -Force -Scope CurrentUser
+  - ps: Import-Module -Name '.\src\PSPetstore'
 build: off
 test_script:
   - ps: Invoke-Pester -EnableExit
