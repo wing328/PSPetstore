@@ -6,7 +6,6 @@
 #
 
 function Invoke-DeleteOrder {
-    [OutputType([System.Void])]
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -50,7 +49,6 @@ function Invoke-DeleteOrder {
 }
 
 function Get-Inventory {
-    [OutputType("{String, Int32}")]
     [CmdletBinding()]
     Param (
     )
@@ -87,14 +85,13 @@ function Get-Inventory {
                                 -QueryParameters $LocalVarQueryParameters `
                                 -FormParameters $LocalVarFormParameters `
                                 -CookieParameters $LocalVarCookieParameters `
-                                -ReturnType "{String, Int32}"
+                                -ReturnType "Hashtable"
 
         return $LocalVarResult["Response"]
     }
 }
 
 function Get-OrderById {
-    [OutputType("Order")]
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -141,7 +138,6 @@ function Get-OrderById {
 }
 
 function Invoke-PlaceOrder {
-    [OutputType("Order")]
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]

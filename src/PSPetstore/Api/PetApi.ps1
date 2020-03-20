@@ -6,7 +6,6 @@
 #
 
 function Add-Pet {
-    [OutputType([System.Void])]
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -56,7 +55,6 @@ function Add-Pet {
 }
 
 function Invoke-DeletePet {
-    [OutputType([System.Void])]
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -108,7 +106,6 @@ function Invoke-DeletePet {
 }
 
 function Find-PetsByStatus {
-    [OutputType("Pet[]")]
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -157,7 +154,6 @@ function Find-PetsByStatus {
 }
 
 function Find-PetsByTags {
-    [OutputType("Pet[]")]
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -206,7 +202,6 @@ function Find-PetsByTags {
 }
 
 function Get-PetById {
-    [OutputType("Pet")]
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -257,7 +252,6 @@ function Get-PetById {
 }
 
 function Update-Pet {
-    [OutputType([System.Void])]
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -307,7 +301,6 @@ function Update-Pet {
 }
 
 function Update-PetWithForm {
-    [OutputType([System.Void])]
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -369,7 +362,6 @@ function Update-PetWithForm {
 }
 
 function Invoke-UploadFile {
-    [OutputType("ApiResponse")]
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]

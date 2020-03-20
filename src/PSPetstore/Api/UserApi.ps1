@@ -6,7 +6,6 @@
 #
 
 function Invoke-CreateUser {
-    [OutputType([System.Void])]
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -52,7 +51,6 @@ function Invoke-CreateUser {
 }
 
 function Invoke-CreateUsersWithArrayInput {
-    [OutputType([System.Void])]
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -98,7 +96,6 @@ function Invoke-CreateUsersWithArrayInput {
 }
 
 function Invoke-CreateUsersWithListInput {
-    [OutputType([System.Void])]
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -144,7 +141,6 @@ function Invoke-CreateUsersWithListInput {
 }
 
 function Invoke-DeleteUser {
-    [OutputType([System.Void])]
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -188,7 +184,6 @@ function Invoke-DeleteUser {
 }
 
 function Get-UserByName {
-    [OutputType("User")]
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -235,7 +230,6 @@ function Get-UserByName {
 }
 
 function Invoke-LoginUser {
-    [OutputType("String")]
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -291,7 +285,6 @@ function Invoke-LoginUser {
 }
 
 function Invoke-LogoutUser {
-    [OutputType([System.Void])]
     [CmdletBinding()]
     Param (
     )
@@ -328,7 +321,6 @@ function Invoke-LogoutUser {
 }
 
 function Update-User {
-    [OutputType([System.Void])]
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
