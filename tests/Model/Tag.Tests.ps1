@@ -8,8 +8,8 @@
 Describe -tag 'PSPetstore' -name 'Tag' {
     Context 'Tag' {
         It 'New-Tag' {
-            # a simple test to create the object
-            $NewObject = New-Tag -Id "TEST_VALUE" -Name "TEST_VALUE"
+            # a simple test to create an object
+            #$NewObject = New-Tag -Id "TEST_VALUE" -Name "TEST_VALUE"
             #$NewObject | Should BeOfType Tag
             #$NewObject.property | Should Be 0
         }

@@ -57,7 +57,7 @@ $Manifest = @{
     ModuleVersion = '0.2.5'
 
     RootModule = 'PSPetstore.psm1'
-    Guid = '{A73A34B8-CACC-4E3B-8A6C-609221AA9E58}' # Has to be static, otherwise each new build will be considered different module
+    Guid = '{0ACC6C67-896F-4303-B0A2-11702B275E0E}' # Has to be static, otherwise each new build will be considered different module
 
     PowerShellVersion = '3.0'
 

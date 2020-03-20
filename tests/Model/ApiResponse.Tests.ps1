@@ -8,8 +8,8 @@
 Describe -tag 'PSPetstore' -name 'ApiResponse' {
     Context 'ApiResponse' {
         It 'New-ApiResponse' {
-            # a simple test to create the object
-            $NewObject = New-ApiResponse -Code "TEST_VALUE" -Type "TEST_VALUE" -Message "TEST_VALUE"
+            # a simple test to create an object
+            #$NewObject = New-ApiResponse -Code "TEST_VALUE" -Type "TEST_VALUE" -Message "TEST_VALUE"
             #$NewObject | Should BeOfType ApiResponse
             #$NewObject.property | Should Be 0
         }

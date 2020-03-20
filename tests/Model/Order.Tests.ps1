@@ -8,8 +8,8 @@
 Describe -tag 'PSPetstore' -name 'Order' {
     Context 'Order' {
         It 'New-Order' {
-            # a simple test to create the object
-            $NewObject = New-Order -Id "TEST_VALUE" -PetId "TEST_VALUE" -Quantity "TEST_VALUE" -ShipDate "TEST_VALUE" -Status "TEST_VALUE" -Complete "TEST_VALUE"
+            # a simple test to create an object
+            #$NewObject = New-Order -Id "TEST_VALUE" -PetId "TEST_VALUE" -Quantity "TEST_VALUE" -ShipDate "TEST_VALUE" -Status "TEST_VALUE" -Complete "TEST_VALUE"
             #$NewObject | Should BeOfType Order
             #$NewObject.property | Should Be 0
         }
