@@ -12,7 +12,6 @@ Describe -tag 'PSPetstore' -name 'Pet' {
             #$NewObject = New-Pet -Id "TEST_VALUE" -Category "TEST_VALUE" -Name "TEST_VALUE" -PhotoUrls "TEST_VALUE" -Tags "TEST_VALUE" -Status "TEST_VALUE"
             #$NewObject | Should BeOfType Pet
             #$NewObject.property | Should Be 0
-            $true | Should Be $false
         }
     }
 }
