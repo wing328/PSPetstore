@@ -11,6 +11,7 @@ Describe -tag 'PSPetstore' -name 'PetApi' {
             #$TestResult = Invoke-PetApiGetPetById -Body "TEST_VALUE"
             #$TestResult | Should BeOfType TODO
             #$TestResult.property | Should Be 0
+            $true | Should Be $false
         }
     }
 
