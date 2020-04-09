@@ -12,37 +12,37 @@ No summary available.
 
 .DESCRIPTION
 
-A tag for a pet
-
-.PARAMETER Id
 No description available.
 
-.PARAMETER Name
-No description available.
+.PARAMETER AdditionalMetadata
+Additional data to pass to server
+
+.PARAMETER File
+file to upload
 
 .OUTPUTS
 
-Tag<PSCustomObject>
+InlineObject1<PSCustomObject>
 #>
 
-function Initialize-PSTag {
+function Initialize-PSInlineObject1 {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipelineByPropertyName = $true)]
-        [System.Nullable[Int64]]
-        ${Id},
-        [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true)]
         [String]
-        ${Name}
+        ${AdditionalMetadata},
+        [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true)]
+        [System.IO.FileInfo]
+        ${File}
     )
 
     Process {
-        'Creating PSCustomObject: PSPetstore => PSTag' | Write-Debug
+        'Creating PSCustomObject: PSPetstore => PSInlineObject1' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $PSO = [PSCustomObject]@{
-            "id" = ${Id}
-            "name" = ${Name}
+            "additionalMetadata" = ${AdditionalMetadata}
+            "file" = ${File}
         }
 
         return $PSO

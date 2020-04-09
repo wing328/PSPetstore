@@ -12,44 +12,37 @@ No summary available.
 
 .DESCRIPTION
 
-Describes the result of uploading an image resource
-
-.PARAMETER Code
 No description available.
 
-.PARAMETER Type
-No description available.
+.PARAMETER Name
+Updated name of the pet
 
-.PARAMETER Message
-No description available.
+.PARAMETER Status
+Updated status of the pet
 
 .OUTPUTS
 
-ApiResponse<PSCustomObject>
+InlineObject<PSCustomObject>
 #>
 
-function Initialize-PSApiResponse {
+function Initialize-PSInlineObject {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipelineByPropertyName = $true)]
-        [System.Nullable[Int32]]
-        ${Code},
+        [String]
+        ${Name},
         [Parameter(Position = 1, ValueFromPipelineByPropertyName = $true)]
         [String]
-        ${Type},
-        [Parameter(Position = 2, ValueFromPipelineByPropertyName = $true)]
-        [String]
-        ${Message}
+        ${Status}
     )
 
     Process {
-        'Creating PSCustomObject: PSPetstore => PSApiResponse' | Write-Debug
+        'Creating PSCustomObject: PSPetstore => PSInlineObject' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $PSO = [PSCustomObject]@{
-            "code" = ${Code}
-            "type" = ${Type}
-            "message" = ${Message}
+            "name" = ${Name}
+            "status" = ${Status}
         }
 
         return $PSO

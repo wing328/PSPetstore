@@ -1,17 +1,17 @@
-# Tag
+# InlineObject1
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **Int64** |  | [optional] [default to null]
-**Name** | **String** |  | [optional] [default to null]
+**AdditionalMetadata** | **String** | Additional data to pass to server | [optional] [default to null]
+**File** | **System.IO.FileInfo** | file to upload | [optional] [default to null]
 
 ## Examples
 
 - Prepare the resource
 ```powershell
-Initialize-PSPetstoreTag  -Id null `
- -Name null
+Initialize-PSPetstoreInlineObject1  -AdditionalMetadata null `
+ -File null
 ```
 
 - Convert the resource to JSON
