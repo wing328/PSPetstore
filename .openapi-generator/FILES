@@ -31,14 +31,3 @@ src/PSOpenAPITools/Private/HttpSignatureAuth.ps1
 src/PSOpenAPITools/Private/Out-DebugParameter.ps1
 src/PSOpenAPITools/Private/RSAEncryptionProvider.cs
 src/PSOpenAPITools/en-US/about_PSOpenAPITools.help.txt
-tests/Api/PetApi.Tests.ps1
-tests/Api/StoreApi.Tests.ps1
-tests/Api/UserApi.Tests.ps1
-tests/Model/ApiResponse.Tests.ps1
-tests/Model/Category.Tests.ps1
-tests/Model/InlineObject.Tests.ps1
-tests/Model/InlineObject1.Tests.ps1
-tests/Model/Order.Tests.ps1
-tests/Model/Pet.Tests.ps1
-tests/Model/Tag.Tests.ps1
-tests/Model/User.Tests.ps1
