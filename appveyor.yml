@@ -30,6 +30,6 @@ deploy_script:
           .\Build.ps1
           choco install NuGet.CommandLine
           Install-PackageProvider -Name NuGet -Force
-          $Result = Publish-Module -NuGetApiKey $env:NuGetApiKey -Path . -Confirm:$False -Verbose
+          $Result = Publish-Module -NuGetApiKey $env:NuGetApiKey -Path .\src\PSOpenAPITools\ -Confirm:$False -Verbose
           Write-Host "Published the PowerShell module."
       }
