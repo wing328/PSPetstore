@@ -9,7 +9,7 @@ version: 1.0.{build}
 image:
   - Visual Studio 2017 # PS 5.x
   - Ubuntu # PS 6.x
-#  - macOS # PS 6.x
+#  - macOS # PS 7.x
 install:
   - ps: $PSVersionTable.PSVersion
   - ps: Install-Module Pester -Force -Scope CurrentUser
@@ -26,7 +26,7 @@ deploy_script:
       $ErrorActionPreference = "Stop"
       if ($env:APPVEYOR_REPO_TAG -eq $true -and $env:NuGetApiKey -ne $null -and $env:APPVEYOR_BUILD_WORKER_IMAGE -eq "Visual Studio 2017")
       {
-          Import-Module -Name '.\src\PSPetstore\PSPetstore.psd1' -Verbose
+          Import-Module -Name '.\src\PSOpenAPITools\PSOpenAPITools.psm1' -Verbose
           choco install NuGet.CommandLine
           Install-PackageProvider -Name NuGet -Force
           $Result = Publish-Module -NuGetApiKey $env:NuGetApiKey -Path . -Confirm:$False -Verbose
