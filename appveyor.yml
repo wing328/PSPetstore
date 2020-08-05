@@ -23,6 +23,8 @@ test_script:
 deploy_script:
   - ps: |
       if ($env:APPVEYOR_REPO_TAG -eq $false -and $env:NuGetApiKey -ne $null -and $env:APPVEYOR_BUILD_WORKER_IMAGE -eq "Visual Studio 2017") {
+          $env:PSModulePath = $env:PSModulePath + ";c:\projects\pspetstore\src"
+
           Set-ExecutionPolicy -ExecutionPolicy Unrestricted
 
           .\Build.ps1
