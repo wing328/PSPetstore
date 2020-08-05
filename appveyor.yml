@@ -27,7 +27,7 @@ deploy_script:
           .\Build.ps1
           choco install NuGet.CommandLine
           Install-PackageProvider -Name NuGet -Force
-          Publish-Module -NuGetApiKey $env:NuGetApiKey -Confirm:$False -Verbose
+          Publish-Module -Name PSOpenAPITools -NuGetApiKey $env:NuGetApiKey -Confirm:$False -Verbose
           if($LastExitCode -ne 0) {
               $host.SetShouldExit($LastExitCode )
           } else {
