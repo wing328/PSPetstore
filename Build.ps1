@@ -59,7 +59,7 @@ $Manifest = @{
     RootModule = 'PSOpenAPITools.psm1'
     Guid = '{58C735DF-521D-404F-9133-703BC8A60660}' # Has to be static, otherwise each new build will be considered different module
 
-    PowerShellVersion = '6.2'
+    PowerShellVersion = '5.0'
 
     FunctionsToExport = $FunctionPath | Get-ChildItem -Filter *.ps1 | Get-FunctionsToExport
 
