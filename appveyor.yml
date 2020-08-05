@@ -23,8 +23,8 @@ test_script:
 deploy_script:
   - ps: |
       if ($env:APPVEYOR_REPO_TAG -eq $false -and $env:NuGetApiKey -ne $null -and $env:APPVEYOR_BUILD_WORKER_IMAGE -eq "Visual Studio 2017") {
-          Import-Module -Name '.\src\PSOpenAPITools\PSOpenAPITools.psm1' -Verbose
           .\Build.ps1
+          Import-Module -Name '.\src\PSOpenAPITools\PSOpenAPITools.psm1' -Verbose
           Module -ListAvailable
 
           #choco install NuGet.CommandLine
