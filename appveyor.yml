@@ -23,19 +23,14 @@ test_script:
 deploy_script:
   - ps: |
       if ($env:APPVEYOR_REPO_TAG -eq $false -and $env:NuGetApiKey -ne $null -and $env:APPVEYOR_BUILD_WORKER_IMAGE -eq "Visual Studio 2017") {
-          $env:PSModulePath = $env:PSModulePath + ";c:\projects\pspetstore\src"
-
-          Set-ExecutionPolicy -ExecutionPolicy Unrestricted
-
           .\Build.ps1
           Import-Module -Name '.\src\PSOpenAPITools\PSOpenAPITools.psm1' -Verbose
-          Module -ListAvailable
-
           #choco install NuGet.CommandLine
           #Install-PackageProvider -Name NuGet -Force
-          Publish-Module -Name PSOpenAPITools -NuGetApiKey $env:NuGetApiKey -Confirm:$False -Verbose
+          Publish-Module -Path '.\src\PSOpenAPITools???' -NuGetApiKey $env:NuGetApiKey -Confirm:$False -Verbose
           if($? -ne 0) {
-              $host.SetShouldExit($LastExitCode )
+              $host.SetShouldExit($LastExitCode)
+              exit
           } else {
               Write-Host "Published the PowerShell module."
           }
