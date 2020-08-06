@@ -7,7 +7,7 @@
 
 version: 1.0.{build}
 image:
-  - Visual Studio 2017 # PS 5.x
+  - Visual Studio 2019 # PS 5.x
   - Ubuntu # PS 6.x
 install:
   - ps: $PSVersionTable.PSVersion

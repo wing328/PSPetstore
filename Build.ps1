@@ -54,7 +54,7 @@ $Manifest = @{
     CompanyName = 'openapitools.org'
     Description = 'PSOpenAPITools - the PowerShell module for OpenAPI Petstore'
 
-    ModuleVersion = '0.1.3'
+    ModuleVersion = '0.1.4'
 
     RootModule = 'PSOpenAPITools.psm1'
     Guid = '{58C735DF-521D-404F-9133-703BC8A60660}' # Has to be static, otherwise each new build will be considered different module
