@@ -22,7 +22,7 @@ test_script:
       }
 deploy_script:
   - ps: |
-      if ($env:APPVEYOR_REPO_TAG -eq $false -and $env:NuGetApiKey -ne $null -and $env:APPVEYOR_BUILD_WORKER_IMAGE -eq "Visual Studio 2017") {
+      if ($env:APPVEYOR_REPO_TAG -eq $false -and $env:NuGetApiKey -ne $null -and $env:APPVEYOR_BUILD_WORKER_IMAGE -eq "Visual Studio 2019") {
           .\Build.ps1
           Import-Module -Name '.\src\PSOpenAPITools\PSOpenAPITools.psm1' -Verbose
           #choco install NuGet.CommandLine
