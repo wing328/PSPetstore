@@ -33,6 +33,7 @@ deploy_script:
           } catch {
               $host.SetShouldExit($LastExitCode)
               Write-Host "Failed to publish the PowerShell module."
+              Write-Host $_
               exit
           }
       }
