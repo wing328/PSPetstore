@@ -27,8 +27,9 @@ deploy_script:
           Import-Module -Name '.\src\PSOpenAPITools\PSOpenAPITools.psm1' -Verbose
           #choco install NuGet.CommandLine
           #Install-PackageProvider -Name NuGet -Force
-          Publish-Module -Path '.\src\PSOpenAPITools' -NuGetApiKey $env:NuGetApiKey -Confirm:$False -Verbose
+          Publish-Module -Path '.\src\PSOpenAPITools' -NuGetApiKey $env:NuGetApiKey -Confirm:$False -Verbose -ErrorAction Stop
           if($LastExitCode -ne 0) {
+              Write-Host "Failed to publish the PowerShell module."
               $host.SetShouldExit($LastExitCode)
               exit
           } else {
